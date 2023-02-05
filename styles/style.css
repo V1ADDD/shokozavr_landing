@@ -50,11 +50,13 @@
 .email {
     margin-top: 16px;
     width: 360px;
-    background: #e3e3e3;
+    background: #d0d0d0;
     font-size: 12px;
     padding: 10px 16px 10px 16px;
     border: 0;
     border-radius: 16px;
+     -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 .footer-item-3{
@@ -123,10 +125,15 @@ button{
     height: 384px;
     padding: 24px 32px;
     font-size: 32px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
+
+
 
 .orange-box, .green-box, .grey-box {
     color: white;
+    cursor: pointer;
 }
 
 .orange-box {
@@ -157,6 +164,8 @@ button{
 .swiper-pagination {
     display: flex;
     margin-bottom: 64px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -195,7 +204,27 @@ span.swiper-pagination-bullet {
     padding: 6px 8px;
     font-size: 16px;
 }
+.swiper-slide > .orange-box:hover{
+    box-shadow: none;
+}
+.orange-box:hover{
+    box-shadow: -15px -15px 0 0 orange;
+}
+.green-box:hover{
+    box-shadow: 15px 15px 0 0 lime;
+}
+.grey-box:hover {
+    box-shadow: 15px -15px 0 0 gray;
+}
+.swiper-wrapper > div{
+    -webkit-transition: margin-top 1s;
+    transition: margin-top 1s;
+    cursor: pointer;
+}
 
+.swiper-slide:hover{
+    margin-top: 32px;
+}
 .etcetera-content {
     margin-top: -32px;
     margin-left: 64px;
@@ -233,8 +262,8 @@ span.swiper-pagination-bullet {
     cursor: pointer;
 }
 
-.type-button:hover {
-    background: #969696;
+.type-button:hover, .email:hover {
+    background: #bebebe;
     color: white;
 }
 

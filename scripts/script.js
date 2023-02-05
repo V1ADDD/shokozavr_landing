@@ -9,7 +9,6 @@ const swiper = new Swiper('.swiper', {
         preloadImages: true,
         preventClicks: true,
         rewind: true,
-        slideToClickedSlide: true,
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
