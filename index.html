@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
-<body>
+<body onload="posech()">
 <div class="nav-container">
     <div class="nav-item-1">
         <div class="langs">
@@ -119,21 +119,40 @@
         <div class="contact-content">
             <div>
                 <p style="font-size: 32px; margin-top: 0">Напишите нам!</p>
-                <p style="color: #343434; font-size: 18px;">Для быстрого ответа свяжитесь с нами в
+                <p style="color: #343434; font-size: 18px;">Вы можете оставить заявку здесь, мы отпишем Вам для уточнения деталей заказа в течение дня!
+                    Для быстрого ответа свяжитесь с нами в
                     <a href="https://www.instagram.com/shokozavr.by/"><u>Instagram</u></a>!
                     Или через любимый мессенджер: <a href="https://t.me/vladrusak"><u>Telegram</u></a> или
                     <a href="viber://chat?number=%2B375296404150"><u>Viber</u></a>!</p>
+                <form style="margin-top: 50px" onsubmit="count_(this,event)">
+                    <a style="display: block; color: #343434; font-size: 16px;">Шоколад 100 грамм с дизайном (шт.):</a>
+                    <input name="gram100" type="number" class="type-button" min="0">
+                    <a style="display: block; color: #343434; font-size: 16px;">Шоколад 200 грамм с дизайном (шт.):</a>
+                    <input name="gram200" type="number" class="type-button" min="0">
+                    <a style="display: block; color: #343434; font-size: 16px;">Шоколад 20 грамм с дизайном (шт.):</a>
+                    <input name="gram20" type="number" class="type-button" min="0">
+                    <a style="display: block; color: #343434; font-size: 16px;">Шоколад 5 грамм с дизайном (шт.):</a>
+                    <input name="gram5" type="number" class="type-button" min="0">
+                    <a style="display: block; color: #343434; font-size: 16px;">Шокопазлы из шоколадок по 5 грамм (размеры шт.):</a>
+                    <input style="margin-bottom: 0" name="pazly1" type="number" class="type-button" min="0">
+                    <input name="pazly2" type="number" class="type-button" min="0">
+                    <a style="display: block; color: #343434; font-size: 16px;">Сертификат (руб.):</a>
+                    <input name="sert" type="number" class="type-button" min="25">
+                    <center>
+                        <button style="display: block;">Рассчитать!</button>
+                    </center>
+                </form>
             </div>
             <div>
-                <form>
+                <form method="POST" action="" onsubmit="send(this, event)">
                     <a style="display: block; color: #343434; font-size: 16px;">ФИО</a>
-                    <input type="text" class="type-button" required>
-                    <a style="display: block; color: #343434; font-size: 16px;">Ваша почта</a>
-                    <input type="email" class="type-button" required>
+                    <input name="FIO" type="text" class="type-button" required>
+                    <a style="display: block; color: #343434; font-size: 16px;">Способ связи (напр. "+375291111111 - Viber")</a>
+                    <input name="Contact" type="text" class="type-button" required>
                     <a style="display: block; color: #343434; font-size: 16px;">Текст сообщения</a>
-                    <textarea style="height: 240px" class="type-button" required></textarea>
+                    <textarea name="mes" style="height: 300px" class="type-button" required></textarea>
                     <center>
-                        <button style="display: block;">Отправить сообщение</button>
+                        <button style="display: block;">Заказать!</button>
                     </center>
                 </form>
             </div>
